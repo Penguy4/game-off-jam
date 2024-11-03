@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810441d268075d74b973c58ae26e7422, type: 3}
+  m_Name: TestObject
+  m_EditorClassIdentifier: 
+  name: Test
+  sprite: {fileID: -2413806693520163455, guid: c40d3ad5263750b41afd05be7d8fb7e9, type: 3}
+  objectNeededToClean: {fileID: 1573732314690670592, guid: bd78d47eae5ce784784c0558912760e3, type: 3}
+  randomized: 0
+  randomSpawnLocations:
+  - {fileID: 666210444216826348, guid: aba7365cda819e743a47e439bb0d2288, type: 3}
+  - {fileID: 7163906389545511843, guid: dea4a34b0fc624b4e81fc2b440634e1d, type: 3}
+  - {fileID: 2161668312733983365, guid: b5287f83a0345964d865c13559c096b7, type: 3}

@@ -7,7 +7,6 @@ public class BaseObject : ScriptableObject
     public string name = "";
     public Sprite sprite;
     [Header("Interaction Info")]
-    public bool isEvidence;
     public GameObject objectNeededToClean;
     [Header("Spawning Info")]
     public bool randomized;
