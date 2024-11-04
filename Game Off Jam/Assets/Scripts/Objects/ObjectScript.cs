@@ -1,17 +1,20 @@
 using UnityEngine;
 using System;
 
-public class ObjectScript : MonoBehaviour
+public class ObjectScript : MonoBehaviour, ICollectible 
 {
     public BaseObject objectInfo;
     public SpriteRenderer spriteRenderer;
+
+    public static event HandleCollection onObjectCollected;
+    public delegate void HandleCollection(BaseObject itemData);
 
     string name;
     Sprite sprite;
     GameObject cleaningObject;
     bool randomized;
     GameObject notRandomLocation;
-    public GameObject[] spawnLocations;
+    GameObject[] spawnLocations;
 
     void Start(){
         name = objectInfo.name;
@@ -35,4 +38,8 @@ public class ObjectScript : MonoBehaviour
         }
     }
 
+    public void Collect(){
+        Destroy(gameObject);
+        onObjectCollected?.Invoke(objectInfo);
+    }
 }

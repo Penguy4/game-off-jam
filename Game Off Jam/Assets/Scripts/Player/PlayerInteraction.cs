@@ -6,8 +6,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Object"){
-            print ("Touched an Object");
+        ICollectible collectible = col.GetComponent<ICollectible>();
+        if (collectible != null){
+            collectible.Collect();
         }
     }
 
