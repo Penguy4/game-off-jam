@@ -11,7 +11,7 @@ public class ObjectScript : MonoBehaviour
     GameObject cleaningObject;
     bool randomized;
     GameObject notRandomLocation;
-    GameObject[] spawnLocations;
+    public GameObject[] spawnLocations;
 
     void Start(){
         name = objectInfo.name;
@@ -27,7 +27,9 @@ public class ObjectScript : MonoBehaviour
         if (!randomized){
             gameObject.transform.position = notRandomLocation.transform.position;
         }else {
-            int number = Convert.ToInt32(spawnLocations[UnityEngine.Random.Range(0, spawnLocations.Length + 1)]);
+            int number = UnityEngine.Random.Range(0, 5);
+
+            print (number);
 
             gameObject.transform.position = spawnLocations[number].transform.position;
         }
