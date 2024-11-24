@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 public class PromptManager : MonoBehaviour
 {
     public PlayerInput input;
+
+    [HideInInspector]
+    public string scheme;
     
     void Update(){
-        string scheme = input.currentControlScheme;
-
-        print (scheme);
+        scheme = input.currentControlScheme;
     }
 }
