@@ -6,6 +6,8 @@ public class PlayerInteraction : MonoBehaviour
 
     bool canCollect;
 
+    public PromptManager promptManager;
+
     ICollectible collectible;
 
     InputAction interact;
@@ -29,6 +31,7 @@ public class PlayerInteraction : MonoBehaviour
         collectible = col.GetComponent<ICollectible>();
         if (collectible != null){
             canCollect = true;
+            promptManager.InteractPromptToggle(canCollect);
         }
     }
     
@@ -37,6 +40,7 @@ public class PlayerInteraction : MonoBehaviour
         if (collectible != null){
             collectible = null;
             canCollect = false;
+            promptManager.InteractPromptToggle(canCollect);
         } 
     }
 

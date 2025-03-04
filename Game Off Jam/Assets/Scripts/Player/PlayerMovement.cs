@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     // Input
     InputAction move, sprint;
 
+    
+
     void Start(){
         move = InputSystem.actions.FindAction("Move");
         move.performed += Move;

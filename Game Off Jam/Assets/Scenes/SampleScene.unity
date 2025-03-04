@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d9b5a8bdbed194a9727536c3586810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptManager: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1511301427}
+  scheme: 
+  prompts: []
 --- !u!4 &1511301429
 Transform:
   m_ObjectHideFlags: 0
