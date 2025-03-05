@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestObject
   m_EditorClassIdentifier: 
   name: Test
-  sprite: {fileID: -2413806693520163455, guid: c40d3ad5263750b41afd05be7d8fb7e9, type: 3}
+  sprite: {fileID: 21300000, guid: 3ec7218ce5275364ca2e9b91b9bbc376, type: 3}
   objectNeededToClean: {fileID: 1573732314690670592, guid: bd78d47eae5ce784784c0558912760e3, type: 3}
   randomized: 1
   randomSpawnLocations:

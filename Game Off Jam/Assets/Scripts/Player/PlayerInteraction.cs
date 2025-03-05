@@ -21,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
         bool isCollecting = ctx.started;
         if (isCollecting && canCollect){
             canCollect = false;
+            promptManager.InteractPromptToggle(canCollect);
             collectible.Collect();
             collectible = null;
         }

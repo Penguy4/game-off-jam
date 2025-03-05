@@ -1,19 +1,28 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PromptManager : MonoBehaviour
 {
     public PlayerInput input;
 
+    public bool debugSwitch;
+
     [HideInInspector]
     public string scheme;
 
-    public GameObject[] prompts;
+    public RawImage pcPrompt, xboxPrompt, psPrompt, switchPrompt;
 
-    GameObject correctPrompt;
+    RawImage correctPrompt;
+
+    void Start(){
+        correctPrompt = pcPrompt;
+    }
     
     void Update(){
         scheme = input.currentControlScheme;
+
+        print (correctPrompt.gameObject.name);
 
         if (input.currentControlScheme != scheme){
             UpdatePrompts();
@@ -22,24 +31,22 @@ public class PromptManager : MonoBehaviour
 
     void UpdatePrompts(){
         switch (scheme){
-            case "KeyboardMouse":
-                correctPrompt = prompts[0];
+            case "Keyboard&Mouse":
+                correctPrompt = pcPrompt;
                 break;
             case "Xbox":
-                correctPrompt = prompts[1];
+                correctPrompt = xboxPrompt;
                 break;
             case "Playstation":
-                correctPrompt = prompts[2];
+                correctPrompt = psPrompt;
                 break;
             case "Switch":
-                correctPrompt = prompts[3];
+                correctPrompt = switchPrompt;
                 break;
         } 
     }
 
     public void InteractPromptToggle(bool active){
-        if (active == true){
-
-        }
+        correctPrompt.enabled = active;
     }
 }
