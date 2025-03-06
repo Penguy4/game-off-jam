@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
-    public List<InventoryItem> inventory = new List<InventoryItem>();
+    public List<InventoryItem> inventoryList = new List<InventoryItem>();
 
     void OnEnable(){
         ObjectScript.onObjectCollected += Add;
@@ -16,11 +16,11 @@ public class Inventory : MonoBehaviour
 
     public void Add(BaseObject itemData){
         InventoryItem newItem = new InventoryItem(itemData);
-        inventory.Add(newItem);
+        inventoryList.Add(newItem);
         Debug.Log ($"Added {itemData.name} to the inventory!");
     }
 
     public void Remove(InventoryItem item){
-        inventory.Remove(item);
+        inventoryList.Remove(item);
     }
 }

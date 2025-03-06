@@ -22,11 +22,7 @@ public class PromptManager : MonoBehaviour
     void Update(){
         scheme = input.currentControlScheme;
 
-        print (correctPrompt.gameObject.name);
-
-        if (input.currentControlScheme != scheme){
-            UpdatePrompts();
-        }
+        UpdatePrompts();
     }
 
     void UpdatePrompts(){

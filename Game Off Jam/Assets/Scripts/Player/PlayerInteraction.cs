@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 
     InputAction interact;
 
+    public Inventory inventory;
+
     void Start (){
         interact = InputSystem.actions.FindAction("Interact");
         interact.started += Interact;
@@ -19,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Interact(InputAction.CallbackContext ctx){
         bool isCollecting = ctx.started;
-        if (isCollecting && canCollect){
+        if (isCollecting && canCollect && inventory.inventoryList.Count != 2){
             canCollect = false;
             promptManager.InteractPromptToggle(canCollect);
             collectible.Collect();
